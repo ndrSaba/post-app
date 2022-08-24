@@ -1,0 +1,42 @@
+.PostList {
+    background: rgb(170, 30, 30);
+    background: linear-gradient(90deg, rgba(170, 30, 30, 1) 0%, rgba(255, 222, 0, 1) 100%);
+    border: 1px black solid;
+    margin: 0px;
+    padding: 5px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+ul {
+    background: rgb(156, 80, 80);
+    background: linear-gradient(90deg, rgba(156, 80, 80, 1) 0%, rgba(255, 222, 0, 1) 100%);
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+.link>li {
+    margin-left: -35px;
+    list-style: none;
+    font-weight: 400;
+}
+
+.PostTitleRow{
+    display:flex;
+    flex-direction: row;
+    font-weight: 400;
+}
+
+.PostNumber{
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.PostTitle {
+    margin-right: 5px;
+    font-weight: 600;
+}
