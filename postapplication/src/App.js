@@ -6,9 +6,12 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <nav>
+        <Link to="/">Home</Link>
+      </nav>
       <Routes>
-        <Route path="/" element={<PostList />}/>
-        <Route path="/posts/:id" element={<Post />}/>
+        <Route path="/" element={<PostList />} />
+        <Route path="/posts/:id" element={<Post />} />
       </Routes>
     </div>
   );

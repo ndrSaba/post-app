@@ -8,7 +8,7 @@ export function useFetch(url, options = {
 }) {
     const [data, setData] = useState(null)
     const [error, setError] = useState(null)
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
 
     const load = async () => {
         try {
@@ -22,7 +22,6 @@ export function useFetch(url, options = {
             });
             const { data } = response;
             setData(data)
-            setLoading(false)
         } catch (err) {
             setError(err.message)
             setLoading(false)
@@ -32,10 +31,14 @@ export function useFetch(url, options = {
         load()
     }, [])
 
+    useEffect(() => {
+        if (data) setLoading(false)
+    }, [data])
+
     return {
         data,
         error,
         loading,
-        load
+        reload: load
     }
 }
